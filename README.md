@@ -1,5 +1,9 @@
 # NAME
 
+<div>
+    <a href="https://travis-ci.org/thedatahub/Catmandu-Fix-Datahub"><img src="https://travis-ci.org/thedatahub/Catmandu-Fix-Datahub.svg?branch=master"></a>
+</div>
+
 Catmandu::Fix::Datahub - Utility functions and generic fixes developed for the Datahub project
 
 # SYNOPSIS
