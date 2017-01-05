@@ -11,6 +11,8 @@ __END__
 
 =head1 NAME
 
+=for html <a href="https://travis-ci.org/thedatahub/Catmandu-Fix-Datahub"><img src="https://travis-ci.org/thedatahub/Catmandu-Fix-Datahub.svg?branch=master"></a>
+
 Catmandu::Fix::Datahub - Utility functions and generic fixes developed for the Datahub project
 
 =head1 SYNOPSIS
