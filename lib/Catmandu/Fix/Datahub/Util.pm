@@ -22,7 +22,7 @@ sub declare_source {
 
     my $var_path = $fixer->split_path($var);
 	my $var_key = pop @$var_path;
-	$perl .= walk($var_path, $var_key, $declared_var);
+	$perl .= walk($fixer, $var_path, $var_key, $declared_var);
 	return $perl;
 }
 
