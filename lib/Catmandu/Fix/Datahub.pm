@@ -17,35 +17,35 @@ Catmandu::Fix::Datahub - Utility functions and generic fixes developed for the D
 
 =head1 SYNOPSIS
 
-  use Catmandu::Fix::Datahub::Util;
-
-=head1 FUNCTIONS
-
-=head2 C<Catmandu::Fix::Datahub::Util>
+L<Catmandu::Fix::Datahub::Util>:
 
   use Catmandu::Fix::Datahub::Util;
+
+L<Catmandu::Fix::Bind::each>:
+
+  do each(path: demo, var: d)
+    
+    copy_field(d.key, var.$append)
+  
+  end
+
+=head1 DESCRIPTION
+
+=head2 L<Catmandu::Fix::Datahub::Util>
+
+Utility functions for use in Catmandu fixes.
 
 =over 4
 
 =item C<declare_source($fixer, $var, $declared_var)>
 
-For an item C<$var>, which is a path (as a string) in a Catmandu fix, assign the value at the path to C<$declared_var>,
-which is a variable that was previously declared in the fix code:
-
-  my $f_var = $self->fixer->generate_var();
-  $code .= "my ${f_var};";
-  $code .= declare_source($self->fixer, 'foo.bar', $f_var);
-
 =item C<walk($fixer, $path, $key, $h)>
 
-Walk through a C<$path> (as an arrayref) until at C<$key>. Assign the value of C<$key> to C<$h>.
-C<$h> must be declared in the fix code.
-
-  my $f_var = $self->fixer->generate_var();
-  $code .= "my ${f_var};";
-  $code .= walk($self->fixer, ['foo', 'bar'], $f_var);
-
 =back
+
+=head2 L<Catmandu::Fix::Bind::each>
+
+A bind to iterate over a hash.
 
 =head1 AUTHOR
 
