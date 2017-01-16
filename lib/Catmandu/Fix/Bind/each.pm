@@ -109,7 +109,7 @@ in the fixes.
 
 =head2 path
 
-The path to a hash in teh data.
+The path to a hash in the data.
 
 =head2 var
 
