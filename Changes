@@ -2,5 +2,8 @@ Revision history for Catmandu-Fix-Datahub
 
 {{$NEXT}}
 
+0.02  2017-01-16 10:39:42 UTC
+	- Added each bind
+
 0.01  2017-01-05 09:19:51 UTC
         - Initial release

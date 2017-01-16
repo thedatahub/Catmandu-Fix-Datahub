@@ -8,31 +8,30 @@ Catmandu::Fix::Datahub - Utility functions and generic fixes developed for the D
 
 # SYNOPSIS
 
-    use Catmandu::Fix::Datahub::Util;
-
-# FUNCTIONS
-
-## `Catmandu::Fix::Datahub::Util`
+[Catmandu::Fix::Datahub::Util](https://metacpan.org/pod/Catmandu::Fix::Datahub::Util):
 
     use Catmandu::Fix::Datahub::Util;
+
+[Catmandu::Fix::Bind::each](https://metacpan.org/pod/Catmandu::Fix::Bind::each):
+
+    do each(path: demo, var: d)
+      
+      copy_field(d.key, var.$append)
+    
+    end
+
+# DESCRIPTION
+
+## [Catmandu::Fix::Datahub::Util](https://metacpan.org/pod/Catmandu::Fix::Datahub::Util)
+
+Utility functions for use in Catmandu fixes.
 
 - `declare_source($fixer, $var, $declared_var)`
-
-    For an item `$var`, which is a path (as a string) in a Catmandu fix, assign the value at the path to `$declared_var`,
-    which is a variable that was previously declared in the fix code:
-
-        my $f_var = $self->fixer->generate_var();
-        $code .= "my ${f_var};";
-        $code .= declare_source($self->fixer, 'foo.bar', $f_var);
-
 - `walk($fixer, $path, $key, $h)`
 
-    Walk through a `$path` (as an arrayref) until at `$key`. Assign the value of `$key` to `$h`.
-    `$h` must be declared in the fix code.
+## [Catmandu::Fix::Bind::each](https://metacpan.org/pod/Catmandu::Fix::Bind::each)
 
-        my $f_var = $self->fixer->generate_var();
-        $code .= "my ${f_var};";
-        $code .= walk($self->fixer, ['foo', 'bar'], $f_var);
+A bind to iterate over a hash.
 
 # AUTHOR
 
